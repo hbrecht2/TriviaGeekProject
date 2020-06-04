@@ -1,3 +1,6 @@
+@fontFamily: 'Orbitron', sans-serif;
+@headingFontSize: 90px;
+@textFontSize: 15px;
 
 /*Styling for index.html*/
 html{
@@ -11,10 +14,10 @@ html{
 .navMenu{
     display: block;
     .navIcon{
-        width: 100%;
-        font-size: 50px;
+        width:5%;
+        font-size: 60px;
         text-align: right;
-        margin-bottom: 0px;
+        margin: 0px 0px 0px 95%;
     }
     .navList{
         width: 100%;
@@ -35,8 +38,8 @@ html{
             text-align: right;
         }
         a{
-            font-size: 15px;
-            font-family: 'Orbitron', sans-serif;
+            font-size: @textFontSize;
+            font-family: @fontFamily;
             color: white;
             text-decoration: none;
         }
@@ -44,7 +47,51 @@ html{
             text-shadow: 0px 0px 20px white;
         }
     }
-    .hidden{
-        display: none;
+}
+
+.hidden{
+    display: none;
+}
+
+.mainPageHeading{
+    text-align: center;
+    font-family: @fontFamily;
+    h1{
+        font-size: 90px;
+        letter-spacing: 5px;
+        padding: 0px;
+        margin: 10% 0px 0px 0px;
+    }
+    h6{
+        font-size: @textFontSize;
+        letter-spacing: 2px;
+        margin-top: 10px;
+    }
+}
+
+@iconFontSize: 150px;
+
+.quizCategoriesDiv{
+    width: 100%;
+    margin-top: 75px;
+    text-align: center;
+    .quizCategoriesList{
+        list-style-type: none;
+        .quizCategoryOption{
+            display: inline-block;
+            text-align: center;
+            width: 33%;
+            span{
+                font-size: @iconFontSize;
+                margin-left: 0px;
+            }
+            a{
+                text-decoration: none;
+                font-family: @fontFamily;
+                font-size: @textFontSize;
+                color: white;
+            }
+        }
+
     }
 }

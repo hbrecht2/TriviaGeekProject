@@ -11,7 +11,7 @@
         <script src="script.js"></script>
     </head>
     <body>
-        <!--Icon for hamburger navigation drop down menu.-->
+        <!--Icon for hamburger navigation drop down menu and hidden menu-->
         <div class="navMenu">
             <span id="navIcon" class="material-icons navIcon">
                 menu
@@ -19,7 +19,7 @@
             
             <div id="hiddenNavMenu" class="navList hidden">
                 <ul>
-                    <li><a href="index.html" class="active">Home</a></li>
+                    <li class="active"><a href="index.html">Home</a></li>
                     <li><a href="scienceQuizList.html">Science Quizzes</a></li>
                     <li><a href="tvMovieQuizList.html">TV & Movie Quizzes</a></li>
                     <li><a href="historyQuizList.html">History Quizzes</a></li>
@@ -36,25 +36,40 @@
         </div>
 
         <!--Quiz category options-->
-        <div>
-            <ul>
-                <li>
-                    <div>
-                        Science Image
-                        <a href="scienceQuizList.html">Science</a>
-                    </div>
+        <div class="quizCategoriesDiv">
+            <ul class="quizCategoriesList">
+                <li class="quizCategoryOption">
+                    <a href="scienceQuizList.html">
+                        <span class="material-icons">
+                        science
+                        </span>
+                    </a>
                 </li>
-                <li>
-                    <div>
-                        TV & Movies Image
-                        <a href="tvMovieQuizList.html">TV & Movies</a>
-                    </div>
+                <li class="quizCategoryOption">
+                    <a href="tvMovieQuizList.html">
+                        <span class="material-icons">
+                        movie_filter
+                        </span>
+                    </a>
                 </li>
-                <li>
-                    <div>
-                        History Image
-                        <a href="historyQuizList.html">History</a>
-                    </div>
+                <li class="quizCategoryOption">
+                    <a href="historyQuizList.html">
+                        <span class="material-icons">
+                        history_edu
+                        </span>
+                    </a>
+                </li>
+            </ul>
+
+            <ul class="quizCategoriesList">
+                <li class="quizCategoryOption">
+                    <a href="scienceQuizList.html">Science</a>
+                </li>
+                <li class="quizCategoryOption">
+                    <a href="tvMovieQuizList.html">TV & Movies</a>
+                </li>
+                <li class="quizCategoryOption">
+                    <a href="historyQuizList.html">History</a>
                 </li>
             </ul>
         </div>
