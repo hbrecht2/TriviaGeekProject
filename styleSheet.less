@@ -1,10 +1,11 @@
 @fontFamily: 'Orbitron', sans-serif;
 @headingFontSize: 90px;
+@subheadingFontSize: 50px;
 @textFontSize: 15px;
 
 /*Styling for index.html*/
 html{
-    height: 100%;
+    height: 105%;
     width: 100%;
     overflow: auto;
     background: radial-gradient(circle at bottom, navy 0, black 100%);
@@ -23,6 +24,8 @@ html{
         width: 100%;
         text-align: right;
         height: auto;
+        position: absolute;
+        z-index: 100;
         ul{
             list-style-type: none;
             height: auto;
@@ -42,6 +45,10 @@ html{
             font-family: @fontFamily;
             color: white;
             text-decoration: none;
+            
+            #active{
+                color: black;
+            }
         }
         a:hover{
             text-shadow: 0px 0px 20px white;
@@ -57,7 +64,7 @@ html{
     text-align: center;
     font-family: @fontFamily;
     h1{
-        font-size: 90px;
+        font-size: @headingFontSize;
         letter-spacing: 5px;
         padding: 0px;
         margin: 10% 0px 0px 0px;
@@ -80,7 +87,7 @@ html{
         .quizCategoryOption{
             display: inline-block;
             text-align: center;
-            width: 33%;
+            width: 30%;
             span{
                 font-size: @iconFontSize;
                 margin-left: 0px;
@@ -90,8 +97,158 @@ html{
                 font-family: @fontFamily;
                 font-size: @textFontSize;
                 color: white;
+                padding: 15px 0;
+            }
+            a:hover{
+                text-shadow: 0px 0px 25px white;
             }
         }
 
+    }
+}
+
+
+/* Styling for quiz list pages*/
+.pageHeading{
+    text-align: center;
+    h1{
+        font-family: @fontFamily;
+        font-size: @headingFontSize;
+    }
+}
+
+.quizListing{
+    width: 70%;
+    margin-bottom: 50px;
+    margin-left: 15%;
+    border: 4px solid white;
+    text-align: left;
+    height: auto;
+        ul{
+        list-style-type: none;
+        margin: 0px;
+        padding: 0px;
+        li{
+            display: inline;
+            vertical-align: middle;
+        }
+        .listImage{ 
+            width: 5%;
+            padding-right: 2%;
+            .quizListImage{
+                width: 100px;
+                height: 100px;
+                display: inline-block;
+                margin-top: 3px;
+                margin-left: 5px;
+            }
+        }
+        .listDescription{
+            font-family: @fontFamily;
+            font-size: @textFontSize;
+            text-align: left;
+            dl{
+                width: 45%;
+                display: inline-block;
+            }
+            dt{
+                font-size: @textFontSize + 6px;                    
+                text-decoration: underline;
+            }
+        }
+        .listStartBtn{
+            text-align: right;
+            margin-left: 3%;
+            padding-left: 7%;
+            button{
+                display: inline-block;
+                font-family: @fontFamily;
+                font-size: @textFontSize;
+                letter-spacing: 1px;
+                padding: 5px;
+                vertical-align: middle;
+            }
+            button:hover{
+                cursor: pointer;
+                box-shadow: 0px 0px 25px white;
+            }
+        }        
+    }
+}
+
+
+/* Styling for the quiz page*/
+.quizInformation{ 
+    width: 80%;
+    margin-left: 10%;
+    display: flex;
+    justify-content: space-between;
+    h1{
+        font-family: @fontFamily;
+        font-size: @subheadingFontSize;
+    }
+}
+
+.rulesBox{
+    width: 70%;
+    margin-top: 150px;
+    margin-bottom: 200px; 
+    margin-left: 12%;
+    padding: 3%;
+    font-family: @fontFamily;
+    font-size: @textFontSize;
+    letter-spacing: 2px;
+    text-align: center;
+    border: 3px white solid;
+    h3{
+        text-decoration: underline;
+    }
+    button{
+        font-family: @fontFamily;
+        font-size: @textFontSize + 10px;
+        margin-top: 15px;
+    }
+    button:hover{
+        cursor: pointer;
+        box-shadow: 0px 0px 25px white;;
+    }
+}
+
+.quizBoard{
+    width: 80%;
+    margin-left: 10%;
+    .quizTable{
+        width: 100%;
+        border: 5px solid white;
+        border-collapse: collapse;
+        text-align: center;
+        th, td {
+            border: 3px solid white;
+            height: 100px;
+        }
+        th{
+            font-family: @fontFamily;
+            font-size: @textFontSize + 10px;
+        }
+        td{
+            font-family: @fontFamily;
+            font-size: @subheadingFontSize - 20px;
+        }
+        td:hover{
+            background-color: rgba(49, 49, 214, 0.445);
+            cursor: pointer;
+        }
+    }
+}
+
+footer{
+    width: 100%;
+    margin-top: 25px;
+    padding-bottom: 15px;
+    text-align: center;
+    .homeNavFooter{
+        font-family: @fontFamily;
+        text-decoration: none;
+        color: white;
     }
 }

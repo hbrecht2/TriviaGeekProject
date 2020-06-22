@@ -1,6 +1,6 @@
 /*Styling for index.html*/
 html {
-  height: 100%;
+  height: 105%;
   width: 100%;
   overflow: auto;
   background: radial-gradient(circle at bottom, navy 0, black 100%);
@@ -19,6 +19,8 @@ html {
   width: 100%;
   text-align: right;
   height: auto;
+  position: absolute;
+  z-index: 100;
 }
 .navMenu .navList ul {
   list-style-type: none;
@@ -39,6 +41,9 @@ html {
   font-family: 'Orbitron', sans-serif;
   color: white;
   text-decoration: none;
+}
+.navMenu .navList a #active {
+  color: black;
 }
 .navMenu .navList a:hover {
   text-shadow: 0px 0px 20px white;
@@ -72,7 +77,7 @@ html {
 .quizCategoriesDiv .quizCategoriesList .quizCategoryOption {
   display: inline-block;
   text-align: center;
-  width: 33%;
+  width: 30%;
 }
 .quizCategoriesDiv .quizCategoriesList .quizCategoryOption span {
   font-size: 150px;
@@ -82,5 +87,148 @@ html {
   text-decoration: none;
   font-family: 'Orbitron', sans-serif;
   font-size: 15px;
+  color: white;
+  padding: 15px 0;
+}
+.quizCategoriesDiv .quizCategoriesList .quizCategoryOption a:hover {
+  text-shadow: 0px 0px 25px white;
+}
+/* Styling for quiz list pages*/
+.pageHeading {
+  text-align: center;
+}
+.pageHeading h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 90px;
+}
+.quizListing {
+  width: 70%;
+  margin-bottom: 50px;
+  margin-left: 15%;
+  border: 4px solid white;
+  text-align: left;
+  height: auto;
+}
+.quizListing ul {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+}
+.quizListing ul li {
+  display: inline;
+  vertical-align: middle;
+}
+.quizListing ul .listImage {
+  width: 5%;
+  padding-right: 2%;
+}
+.quizListing ul .listImage .quizListImage {
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  margin-top: 3px;
+  margin-left: 5px;
+}
+.quizListing ul .listDescription {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 15px;
+  text-align: left;
+}
+.quizListing ul .listDescription dl {
+  width: 45%;
+  display: inline-block;
+}
+.quizListing ul .listDescription dt {
+  font-size: 21px;
+  text-decoration: underline;
+}
+.quizListing ul .listStartBtn {
+  text-align: right;
+  margin-left: 3%;
+  padding-left: 7%;
+}
+.quizListing ul .listStartBtn button {
+  display: inline-block;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 15px;
+  letter-spacing: 1px;
+  padding: 5px;
+  vertical-align: middle;
+}
+.quizListing ul .listStartBtn button:hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 25px white;
+}
+/* Styling for the quiz page*/
+.quizInformation {
+  width: 80%;
+  margin-left: 10%;
+  display: flex;
+  justify-content: space-between;
+}
+.quizInformation h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 50px;
+}
+.rulesBox {
+  width: 70%;
+  margin-top: 150px;
+  margin-bottom: 200px;
+  margin-left: 12%;
+  padding: 3%;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 15px;
+  letter-spacing: 2px;
+  text-align: center;
+  border: 3px white solid;
+}
+.rulesBox h3 {
+  text-decoration: underline;
+}
+.rulesBox button {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 25px;
+  margin-top: 15px;
+}
+.rulesBox button:hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 25px white;
+}
+.quizBoard {
+  width: 80%;
+  margin-left: 10%;
+}
+.quizBoard .quizTable {
+  width: 100%;
+  border: 5px solid white;
+  border-collapse: collapse;
+  text-align: center;
+}
+.quizBoard .quizTable th,
+.quizBoard .quizTable td {
+  border: 3px solid white;
+  height: 100px;
+}
+.quizBoard .quizTable th {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 25px;
+}
+.quizBoard .quizTable td {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 30px;
+}
+.quizBoard .quizTable td:hover {
+  background-color: rgba(49, 49, 214, 0.445);
+  cursor: pointer;
+}
+footer {
+  width: 100%;
+  margin-top: 25px;
+  padding-bottom: 15px;
+  text-align: center;
+}
+footer .homeNavFooter {
+  font-family: 'Orbitron', sans-serif;
+  text-decoration: none;
   color: white;
 }
