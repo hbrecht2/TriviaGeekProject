@@ -1,6 +1,6 @@
 /*Styling for index.html*/
 html {
-  height: 105%;
+  height: 112%;
   width: 100%;
   overflow: auto;
   background: radial-gradient(circle at bottom, navy 0, black 100%);
@@ -14,6 +14,9 @@ html {
   font-size: 60px;
   text-align: right;
   margin: 0px 0px 0px 95%;
+}
+.navMenu .navIcon:hover {
+  cursor: pointer;
 }
 .navMenu .navList {
   width: 100%;
@@ -41,9 +44,6 @@ html {
   font-family: 'Orbitron', sans-serif;
   color: white;
   text-decoration: none;
-}
-.navMenu .navList a #active {
-  color: black;
 }
 .navMenu .navList a:hover {
   text-shadow: 0px 0px 20px white;
@@ -216,6 +216,7 @@ html {
 .quizBoard .quizTable td {
   font-family: 'Orbitron', sans-serif;
   font-size: 30px;
+  width: 16.6%;
 }
 .quizBoard .quizTable td:hover {
   background-color: rgba(49, 49, 214, 0.445);

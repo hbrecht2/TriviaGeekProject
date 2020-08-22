@@ -10,22 +10,23 @@ function startQuiz(){
     var rulesBox = document.getElementById("rulesBox")
     var roundOneBoard = document.getElementById("roundOneBoard")
 
-    startGameBtn.addEventListener("click", function(){
-        rulesBox.classList.add("hidden")
+    startGameBtn.addEventListener("click",function(){
+        rulesBox.classList.add("hidden");
         getQuizContent()
         questionTimer()
         roundOneBoard.classList.remove("hidden")
-
     })
 }
 
 //practice with point counter
 function getQuizContent(){
-    points += 2;
-    
     var quizPoints = document.getElementById("quizPoints")
     quizPoints.innerHTML = ("Points: " + points)
 }
 
 //timer function 
 function questionTimer(){}
+
+$(document).ready(function(){
+    $("#cat1").text("All the Numbers")
+  });

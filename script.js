@@ -1,6 +1,6 @@
 window.onload = function(){
     var navIcon = document.getElementById("navIcon")
-    navIcon.addEventListener("click", showHiddenNavMenu)
+    navIcon.addEventListener("click",showHiddenNavMenu)
     openQuizPage()
 }
 
@@ -20,37 +20,19 @@ function openQuizPage() {
     var biologyStartBtn = document.getElementById("biologyStartBtn")
     
     //TV & Movie Quizzes Start Buttons
-    var friendsStartBtn = document.getElementById("friendsStartBtn")
+    var friendsStartBtn = document.getElementById('friendsStartBtn')
 
-    //checks that friendsStartBtn variable is not null 
+    //checks that friendsStartBtn variable is not null and stores quiz name in local storage 
     if(friendsStartBtn) { 
         friendsStartBtn.addEventListener("click", function(){
-        var quiz = null 
-        localStorage.quiz = ('friendsQuiz')
-        window.location = "quizTitle.html"
-        })
+            var quiz = null
+            localStorage.quiz = ('friendsQuiz')
+            window.location = "quizTitle.php"
+            })
     }
-
-    if (localStorage.getItem('quiz') == "friendsQuiz") {
-        var quizTitleUpdate = "Friends Trivia Quiz"
-        var quizImageUpdate = "Images/friendsQuiz.png"
-        var quizDescriptionUpdate = "This is the friends trivia description"
-        getQuizPageContent(quizTitleUpdate, quizImageUpdate, quizDescriptionUpdate)
-        }
 
     //History Quizzes Start Buttons
     var usPresidentStartBtn = document.getElementById("usPresidentStartBtn")
     var wwiiStartBtn = document.getElementById("wwiiStartBtn")
 }
 
-
-function getQuizPageContent(quizTitleUpdate, quizImageUpdate, quizDescriptionUpdate){
-    //Elements to be changed in quiz title document 
-    var quizTitle = document.getElementById("quizTitle")
-    var quizImage = document.getElementById("quizImage")
-    var quizDescription = document.getElementById("quizDescription")
-
-    quizTitle.innerHTML = quizTitleUpdate
-    quizImage.src = quizImageUpdate
-    quizDescription.innerHTML = quizDescriptionUpdate
-}

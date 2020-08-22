@@ -5,7 +5,7 @@
 
 /*Styling for index.html*/
 html{
-    height: 105%;
+    height: 112%;
     width: 100%;
     overflow: auto;
     background: radial-gradient(circle at bottom, navy 0, black 100%);
@@ -19,6 +19,9 @@ html{
         font-size: 60px;
         text-align: right;
         margin: 0px 0px 0px 95%;
+    }
+    .navIcon:hover{
+        cursor: pointer;
     }
     .navList{
         width: 100%;
@@ -45,10 +48,6 @@ html{
             font-family: @fontFamily;
             color: white;
             text-decoration: none;
-            
-            #active{
-                color: black;
-            }
         }
         a:hover{
             text-shadow: 0px 0px 20px white;
@@ -233,6 +232,7 @@ html{
         td{
             font-family: @fontFamily;
             font-size: @subheadingFontSize - 20px;
+            width: 16.6%;
         }
         td:hover{
             background-color: rgba(49, 49, 214, 0.445);
