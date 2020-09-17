@@ -1,7 +1,0 @@
-{
-  "name": "QuikPik",
-  "integrations": {
-    "cordova": {}
-  },
-  "type": "angular"
-}
