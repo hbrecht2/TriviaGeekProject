@@ -16,18 +16,31 @@ function showHiddenNavMenu() {
 
 function openQuizPage() {
     //Science Quizzes Start Buttons
-    var elementsStartBtn = document.getElementById("elementsStartBtn")
-    var biologyStartBtn = document.getElementById("biologyStartBtn")
+    var elementsStartBtn = document.getElementById("elementsStartBtn");
+    var biologyStartBtn = document.getElementById("biologyStartBtn");
+
+    if(elementsStartBtn) { 
+        elementsStartBtn.addEventListener("click", function(){
+            localStorage.quiz = ('elementsQuiz')
+            window.location = "quizTitle.php"
+            })
+    };
+    
+    if(biologyStartBtn) { 
+        biologyStartBtn.addEventListener("click", function(){
+            localStorage.quiz = ('biologyQuiz');
+            window.location = "quizTitle.php";
+            })
+    ;}
     
     //TV & Movie Quizzes Start Buttons
-    var friendsStartBtn = document.getElementById('friendsStartBtn')
+    var friendsStartBtn = document.getElementById('friendsStartBtn');
 
     //checks that friendsStartBtn variable is not null and stores quiz name in local storage 
     if(friendsStartBtn) { 
         friendsStartBtn.addEventListener("click", function(){
-            var quiz = null
-            localStorage.quiz = ('friendsQuiz')
-            window.location = "quizTitle.php"
+            localStorage.quiz = ('friendsQuiz');
+            window.location = "quizTitle.php";
             })
     }
 

@@ -159,6 +159,12 @@ html {
   cursor: pointer;
   box-shadow: 0px 0px 25px white;
 }
+.quizListing ul .listStartBtn button:disabled,
+.quizListing ul .listStartBtn button[disabled] {
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+}
 /* Styling for the quiz page*/
 .quizInformation {
   width: 80%;
@@ -169,6 +175,38 @@ html {
 .quizInformation h1 {
   font-family: 'Orbitron', sans-serif;
   font-size: 50px;
+}
+#questionBox {
+  width: 70%;
+  margin-top: 150px;
+  margin-bottom: 200px;
+  margin-left: 12%;
+  padding: 3%;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 15px;
+  letter-spacing: 2px;
+  text-align: center;
+  border: 3px white solid;
+  background-color: rgba(24, 24, 90, 0.445);
+}
+#questionBox p {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 25px;
+  margin: 0 0 20px 0;
+}
+#questionBox input {
+  width: 50%;
+  background-color: transparent;
+  color: white;
+  border: 2px white solid;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 15px;
+  letter-spacing: 3px;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+#questionBox input:focus {
+  outline: none;
 }
 .rulesBox {
   width: 70%;
@@ -184,6 +222,7 @@ html {
 }
 .rulesBox h3 {
   text-decoration: underline;
+  padding-bottom: 5px;
 }
 .rulesBox button {
   font-family: 'Orbitron', sans-serif;
@@ -221,6 +260,9 @@ html {
 .quizBoard .quizTable td:hover {
   background-color: rgba(49, 49, 214, 0.445);
   cursor: pointer;
+}
+.unselectable:hover {
+  cursor: none !important;
 }
 footer {
   width: 100%;

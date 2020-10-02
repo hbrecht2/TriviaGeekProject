@@ -19,25 +19,37 @@
 
         <div id="rulesBox" class="rulesBox">
             <h3>Game Play:</h3>
-            <p>To start, press the button below. Once started, you will be shown a grid of categories and point values. 
-                You may choose any point value to get your first question. 
-                You have 15 seconds to correctly answer the question. 
+            <p>Press the button below to begin. You will be shown a grid of categories and point values. <br>
+                You may choose any point value to get your first question. <br><br>
+                You have 15 seconds to correctly answer the question. It will automatically submit your answer at 15 seconds.<br><br>
                 Spelling counts! If you answer correctly, you receive the amount of points the question was worth. 
                 If you answer incorrectly, those points are removed from your total score which is displayed in the top right corner. 
                 Good luck!
             </p>
+
+
+            <p> Note: If you exit the game or reload the page, your progress will be lost and quiz will restart. </p>
             <button id="startGameBtn">Start Quiz</button>
+        </div>
+
+        <div id="questionBox" class="hidden">
+            <p id="question"></p>
+            <form id="answerForm">
+                <input type="text" id="answer" name="answer" placeholder="Enter your answer here...">
+            </form>
+            <div id="countdown"> TIMER: 10 seconds</div>
+            <div id="answerBox" class="hidden"></div>
         </div>
 
         <div id="roundOneBoard" class="quizBoard hidden">
             <table class="quizTable">
                 <tr>
-                  <th id="cat1" class="newQuestion">Category 1</th>
-                  <th id="cat2" class="newQuestion">Category 2</th>
-                  <th id="cat3" class="newQuestion">Category 3</th>
-                  <th id="cat4" class="newQuestion">Category 4</th>
-                  <th id="cat5" class="newQuestion">Category 5</th>
-                  <th id="cat6" class="newQuestion">Category 6</th>
+                  <th id="cat1" class="category">Category 1</th>
+                  <th id="cat2" class="category">Category 2</th>
+                  <th id="cat3" class="category">Category 3</th>
+                  <th id="cat4" class="category">Category 4</th>
+                  <th id="cat5" class="category">Category 5</th>
+                  <th id="cat6" class="category">Category 6</th>
                 </tr>
                 <tr>
                   <td id="cat1200" class="newQuestion">200</td>
@@ -81,6 +93,7 @@
                 </tr>
               </table>
         </div>
+
     </body>
     <footer>
         <a class="homeNavFooter" href="index.html">Home</a>
